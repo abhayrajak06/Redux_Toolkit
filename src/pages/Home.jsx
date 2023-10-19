@@ -27,7 +27,7 @@ const Home = () => {
           marginTop: "20rem",
         }}
       >
-        <div class="lds-ring">
+        <div className="lds-ring">
           <div></div>
           <div></div>
           <div></div>

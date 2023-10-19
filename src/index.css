@@ -14,6 +14,7 @@ img {
 }
 .card {
   background: white;
+  width: 19rem;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -21,8 +22,11 @@ img {
 }
 
 .productsWrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   padding: 1rem;
 }
@@ -56,13 +60,19 @@ img {
 
 .cartCard {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: #fff;
   margin-bottom: 20px;
   padding: 14px;
-  border-radius: 5px;
-  width: 50%;
+  border-radius: 0.6rem;
+  gap: 1.6rem;
+  width: 70%;
+}
+
+.cartCard img{
+  width: 2.5rem;
 }
 
 

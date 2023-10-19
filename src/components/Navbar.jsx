@@ -15,9 +15,9 @@ const Navbar = () => {
         marginBottom: "1rem",
         position: "sticky",
         top: "0",
-        zIndex: "20",
+        zIndex: "16",
         padding: "0.8rem",
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        backgroundColor: "rgba(255, 255, 255, 0.95)",
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 30px 60px -18px, rgba(0, 0, 0, 0.4) 0px 18px 36px -38px",
       }}
