@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { add } from "../Redux/Cartslice";
 import { useDispatch, useSelector } from "react-redux";
 import { STATUSES, fetchProducts } from "../Redux/ProductSlice";
+import toast from "react-hot-toast";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const Home = () => {
 
   const handleAdd = (product) => {
     dispatch(add(product));
+    toast.success("Item added to cart");
   };
   if (status === STATUSES.LOADING) {
     return (
@@ -25,7 +27,12 @@ const Home = () => {
           marginTop: "20rem",
         }}
       >
-        Loading...
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </h2>
     );
   }
@@ -36,7 +43,7 @@ const Home = () => {
         <div className="card" key={product.id}>
           <img src={product.image} alt="img" />
           <h4>{product.title}</h4>
-          <h5>{product.price}</h5>
+          <h5>${product.price}</h5>
           <button className="btn" onClick={() => handleAdd(product)}>
             Add to cart
           </button>
